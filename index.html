@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Organic Store.com</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .Main_Body{
+        width: 100vw;
+        height: 5vh;
+        background-color: black;
+    }
+    .Header{
+        width: 85vw;
+        height: 10vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        gap: 250px;
+    }  
+    .imagee3{
+        width: 50px;
+        height: 50px;
+    }
+    .Header nav a{
+        text-decoration: none;
+        color: #000;
+        font-size: 1em;
+        padding: 10px;
+        position: relative;
+    }
+    span{
+        display: flex;
+        margin-left: -100px;
+    }
+    #A{
+        background-color: rgb(186, 211, 211);
+        padding: 10px;
+        color: black;
+        border-radius: 8px;
+    }
+    #A:hover{
+        border-radius: 2px;
+        box-shadow: 0px 0px 4px black;
+        cursor: pointer;
+    }
+    #B{
+        margin-left: 10px;
+        background-color: rgb(186, 211, 211);
+        padding: 10px;
+        color: black;
+        border-radius: 8px;
+    }
+    #B:hover{
+        border-radius: 2px;
+        box-shadow: 0px 0px 4px black;
+        cursor: pointer;
+    }
+    #C{
+        margin-left: 10px;
+        background-color: rgb(186, 211, 211);
+        padding: 10px;
+        color: black;
+        border-radius: 8px;
+    }
+    #C:hover{
+        border-radius: 2px;
+        box-shadow: 0px 0px 4px black;
+        cursor: pointer;
+    }
+    .First{
+        width: 100vw;
+        background: linear-gradient(rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),url(https://media.istockphoto.com/id/1382384615/photo/supermarket-grocery-store-aisle-and-shelves-blurred-background.webp?b=1&s=170667a&w=0&k=20&c=Dy7i3X2GQxGf68dTjxHVXWMwyixdx_RF7NYgf8Qh_gc=);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        padding: 100px;
+    }
+    #Change_color{
+        color: orange;
+    }
+    h1{
+        display: inline;
+        color: azure;
+    }
+    #p{
+        color: azure;
+        line-height: 1.6;
+        font-size: 0.8rem;
+    }
+    .Main_Button{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8em 3.0em;
+    text-align: center;
+    color: azure;
+    font-family: sans-serif;
+    margin: 20px;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 10px 3px  tomato;
+    transition: 0.3s;
+    }
+    .Main_Button:hover {
+    box-shadow: 0 0 10px 3px  #3498db;
+    color: goldenrod;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px #3498db; 
+    }
+    #Second{
+        width: 80vw;
+        margin: 30px auto;
+    }
+    .clippath{
+        clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0% 0%);
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 173, 21);
+        align-items: center;
+    }
+    h1{
+        color: azure;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .formatimages{
+        width: 341px;
+        height: 333px;
+        background-color: azure;
+        float: left;
+        position: relative;
+        top: 40px;
+        flex-shrink: 30%;
+        margin-left: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+        box-shadow: 0px 0px 1.1px black;
+        border-radius: 5px;
+        cursor: grab;
+    }
+    .formatimages img{
+        width: 100px;
+        height: 100px;
+        transition: all 0.8s;
+    }
+    .button1{
+        padding: 12px 60px 12px 60px;
+        background-color: orange;
+        border: none;
+        border-radius: 5px;
+    }
+    .button1:hover{
+        border-radius: 0px 30px 0px 30px;
+    }
+    p{
+        color: rgb(66, 63, 63);
+        font-size:13.5px ;
+    }
+    .formatimages:hover{
+        border: solid black 1px;
+        transform: scale(1.03);
+        box-shadow: 0px 0px 8px black ;
+    }
+    .A{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        top: 209px;
+        right: 0px;
+    }
+    .B{
+        width: 100%;
+        height: 33px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        top: 235px;
+        right: 0px;
+    }
+    .C{
+        width: 100%;
+        height: 33px;
+        margin-top: 7px;
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        top: 274px;
+        right: 0px;
+    }
+    .D{
+        width: 100%;
+        height: 33px;
+        margin-top: 7px;
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        top: 310px;
+        right: 0px;
+    }
+    .fa-brands{
+        font-size: 25px;
+        color: azure;
+        width: 30px;
+        height: 33px;
+        transition: all 0.8s;
+        cursor: pointer;
+        padding-top: 5px;
+        padding-left: 4px;
+        justify-content: center;
+        position: relative;
+        right: 1px;
+        border-radius: 4px;
+
+    }
+    .fa-facebook{
+        background-color: #4267B2;
+    }
+    .fa-brands:hover{
+        width: 84px;
+    }
+    .fa-twitter{
+        background-color: #1DA1F2;
+    }
+    .fa-youtube{
+        background-color: #c4302b;
+    }
+
+    .fa-instagram{
+        background:radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    }
+    #Third{
+        width: 80vw;
+        margin: 410px auto; 
+    }
+    i{
+        color: orange;
+    }
+    .formatimages1{
+        width: 341px;
+        height: 333px;
+        background-color: azure;
+        float: left;
+        position: relative;
+        top: 40px;
+        margin-top: 50px;
+        flex-shrink: 30%;
+        margin-left: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+        box-shadow: 0px 0px 1.1px black;
+        border-radius: 5px;
+        cursor: grab;
+    }
+    .formatimages1 img{
+        width: 100px;
+        height: 100px;
+        transition: all ease-out;
+    }
+    .button2{
+        background-color: transparent;
+        padding: 12px 60px 12px 60px;
+        border: solid black 2px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button2:hover{
+        background-color: orange;
+        padding: 12px 60px 12px 60px;
+    }
+    p{
+        color: rgb(66, 63, 63);
+        font-size:13.5px ;
+    }
+    .formatimages1:hover{
+        border: solid black 1px;
+        transform: scale(1.03);
+        box-shadow: 0px 0px 8px black ;
+    }
+    .Linebuttons{
+        width: 100vw;
+        margin: auto;
+        padding-top: 20px;
+        height: 100px;
+        box-shadow: 0px 0px 1px;
+        display: flex;
+        background-color: #e2e8ec;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+    }
+    .quicksearch{
+        width:184px;
+        height: 35px;
+        border: solid 1px black;
+        background-color: beige;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px; 
+        cursor: pointer;
+        transition: all 400ms;
+    }
+    .line{
+        border: none;
+        position: relative;
+        background-color: transparent;
+        left: 10px;
+    }
+    .quicksearch:hover{
+        background-color: yellowgreen;
+    }
+    #fourth{
+        width: 80vw;
+        margin: 800px auto;
+    }
+    .favimages{
+        width: 100%;
+        height: 300px;
+        margin: auto;
+    }
+    .image4{
+        width: 260px;
+        margin-top: 44px;
+        transition: all 0.4s;
+        cursor: pointer;
+    }
+    .cart{
+        width: 100%;
+        margin-top: 40px;   
+    }
+    .cartset{
+        width: 255px;
+        height: 400px;
+        float: left;
+        margin: 4px;
+        box-shadow: 0px 0px 4px;
+    }
+    .cartsett{
+        width: 255px;
+        height: 400px;
+        float: left;
+        margin: 4px;
+        margin-top: 48px;
+        box-shadow: 0px 0px 4px;
+    }
+    .cartset:hover{
+        transform: scale(1.04);
+    }
+    .cartsett:hover{
+        transform: scale(1.04);
+    }
+    .cartset1{
+        width: 222px;
+        margin: auto;
+    }
+    .carttext{
+        font-size: 16px;
+        color: rgb(180, 175, 175);
+        line-height: 18px;
+    }
+    .image5{
+        position: relative;
+        top: 3.3px;
+        left: 8px;
+    }
+    #button{
+        margin-top: 8px;
+        margin-left: 8px;
+        width: 200px;
+        height: 33px;
+        font-size: 16px;
+        background-color: rgb(9, 138, 88);
+        color: azure;
+        border: none;
+    }
+    #button:hover{
+        background-color: green;
+        border-radius: 4px;
+    }
+    #fifth{
+        width: 80vw;
+        margin: 940px auto;
+    }
+    .Note{
+        width: 100%;
+        height: 200px;
+        position: relative;
+        left: 10px;
+        top:430px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+          }
+    .Footer{
+        width: 98vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -488px;
+        box-shadow: 0px 0px 4.4px;
+        margin: auto;
+    }
+    .Footer_Content{
+        width: 80vw;
+        margin-top: 48px;
+    }
+    .content{
+        width: 19vw;
+        margin: 6px;
+        height: 300px;
+        float: left;
+    }
+    #quick{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .lastinput::placeholder{
+        position: relative;
+        left: 10px;
+    }
+    .imagee:hover{
+        transform: scale(1.08);
+    }
+    .imagee1:hover{
+        transform: scale(1.08);
+    }
+    .imagee2:hover{
+        transform: scale(1.08);
+    }
+    .image4:hover{
+        transform: scale(1.08);
+    }
+    .image6:hover{
+        transform: scale(1.08);
+    }
+    .logo{
+        color: orange;
+        border: 2px solid orange;
+        padding: 3px;
+        font-size: 16px;
+        border-radius: 10px;
+        position: relative;
+        left: 14px;
+        box-shadow: 0px 0px 4px orange;
+    }
+</style>
+<body>
+    <div class="Main_Body"></div>
+    <div class="Header">
+       <h2 class="logo">Groccery<br> <i class="fa-solid fa-bag-shopping" 
+        style="position: relative; left: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Store</h2>
+       
+        <nav>
+            <a href="#">Home</a>
+            <a href="#Second">Features</a>
+            <a href="#Third">Products</a>
+            <a href="#fourth">Catogiries</a>
+            <a href="#fifth">Review</a>
+            <a href="grocery.html">Blogs</a>
+        </nav>
+        <span>
+        <i class="fa-solid fa-magnifying-glass" id="A"></i>
+        <i class="fa-solid fa-cart-shopping" id="B"></i>
+        <i class="fa-solid fa-user" id="C"></i>
+        </span>
+    </div>
+    <div class="A">
+        <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="B">
+        <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="C">
+        <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="D">
+        <i class="fa-brands fa-instagram"></i>
+        </div>
+        </div>
+
+    <!-- -------Area for body---------- -->
+    <section class="First">
+        <h1>Fresh And</h1>
+        <h1 id="Change_color">Organic Foods & Products</h1>
+        <h1>For You</h1>
+        <br><br>
+        <p id="p">Elevate your well-being with <a href="grocery.html" style="font-size: 13px; text-decoration: none;
+        color: orange; cursor: pointer;" >[The Organic Store] </a>organic foods and products<br>Our organic foods and products are a testament to health and environmental responsibility also.</p>
+        <br>
+        <button class="Main_Button">Shop Now</button>
+    </section>
+    <div class="Linebuttons">
+        <span class="quicksearch line">
+            Quick Search
+        </span>
+        <span class="quicksearch">
+            Atta
+        </span>
+        <span class="quicksearch">
+            Ghee
+        </span>
+        <span class="quicksearch">
+            Biscuit
+        </span>
+        <span class="quicksearch">
+            Chocolate
+        </span>
+        <span class="quicksearch">
+            Millets
+        </span>
+    </div>
+    <!-- ------------Area For Images---------- -->
+   <section id="Second">
+    <table class="table">
+        <tr>
+            <td><h1 style="color: black;">Our</h1></td>
+            <td>
+                <div class="clippath">
+                    <h1>Features</h1>
+                </div>
+            </td>
+        </tr>
+       </table>
+       <div class="row">
+        <div class="formatimages">
+            <img src="https://img.freepik.com/premium-vector/vegetables-fly-bowl-salad-preparation-mixing-cooking-ingredients-blending-different-food-cutting-tomatoes-lettuce-leaves-healthy-natural-green-snack-vector-dieting-nutrition_176411-4242.jpg?w=2000" alt="Food" class="imagee">
+            <br>
+            <h2>Fresh And Organic </h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur vihsh shish <br>voluptatum ullam corrupti huk.</p>
+            <br>
+            <button class="button1">Submit</button>
+        </div>
+        <div class="formatimages">
+            <img src="https://img.freepik.com/premium-vector/delivery-man-riding-red-scooter-illustration_9845-14.jpg?size=626&ext=jpg&ga=GA1.1.375077226.1693922449&semt=sph" alt="Delivery Product" class="imagee">
+            <br>
+            <h2>Fresh And Organic </h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur  <br>voluptatum ullam corrupti huk.</p>
+            <br>
+            <button class="button1">Submit</button>
+        </div>
+        <div class="formatimages">
+            <img src="https://img.freepik.com/free-vector/mobile-payments-concept-illustration_114360-1243.jpg?w=2000" alt="Digital Payment" class="imagee">
+            <br>
+            <h2>Fresh And Organic </h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur  <br>voluptatum ullam corrupti huk.</p>
+            <br>
+            <button class="button1">Submit</button>
+        </div>
+
+       </div>
+   </section>
+   <section id="Third">
+    <table class="table">
+        <tr>
+            <td><h1 style="color: black;">Our</h1></td>
+            <td>
+                <div class="clippath">
+                    <h1>Products</h1>
+                </div>
+            </td>
+        </tr>
+       </table>
+       <div class="row">
+        <div class="formatimages">
+            <img src="https://img.freepik.com/free-photo/orange-white-white_144627-16571.jpg?size=626&ext=jpg&ga=GA1.1.375077226.1693922449&semt=ais" alt="Food" class="imagee1">
+            <br>
+            <h2>Fresh And Organic </h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+        <div class="formatimages">
+            <img src="https://img.freepik.com/free-photo/red-onion_144627-15416.jpg?size=626&ext=jpg&ga=GA1.2.375077226.1693922449&semt=ais" alt="Delivery Product" class="imagee1">
+            <br>
+            <h2>Fresh Oninions</h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+        <div class="formatimages">
+            <img src="https://img.freepik.com/free-photo/raw-meat_144627-33845.jpg?size=626&ext=jpg&ga=GA1.2.375077226.1693922449&semt=ais" alt="Digital Payment" class="imagee1">
+            <br>
+            <h2>Fresh And Organic </h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+               <!-- -------------Dummy------------->
+        <div class="formatimages1">
+            <img src="https://media.istockphoto.com/id/1187170986/photo/red-lentils-pulses-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=J-EV36Q_XWEANosahfHLpmKDgTEtp7tNIGVjWH6TjoQ=" alt="Food" class="imagee2">
+            <br>
+            <h2>Pulses </h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+        <div class="formatimages1">
+            <img src="data:image/jpeg;base64,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" alt="Delivery Product" class="imagee2">
+
+
+            <br>
+            <h2>Oils</h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+        <div class="formatimages1">
+            <img src="https://img.freepik.com/free-vector/fresh-organic-milk-products-set-with-cheese-butter_1284-14075.jpg?size=626&ext=jpg&ga=GA1.1.375077226.1693922449&semt=ais" class="imagee2">
+
+            <br>
+            <h2>Dairy Items </h2>
+            <br>
+            <p>$4.99-10.99<br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <br>
+            <button class="button2">Submit</button>
+        </div>
+       </div>
+   </section>
+   <section id="fourth">
+    <table class="table">
+        <tr>
+            <td><h1 style="color: black;">Your</h1></td>
+            <td>
+                <div class="clippath">
+                    <h1>Favourite</h1>
+                </div>
+            </td>
+        </tr>
+       </table>
+       <div class="favimages">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Pooja_Needs__Banner_270x260_3b399689-4557-41ae-882a-343e0e0aec20.jpg?v=1695816752" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/quick_bites_-270x260_99ade872-af68-4f45-822a-28fa3a64e42c.jpg?v=1695816848" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Stay_Hydrated-270x260_20f865f1-1fe1-4f2e-8369-e0dc3a05755b.jpg?v=1695816681" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Back_To_School_Banner_270x260_7088cc54-529e-4c03-b193-2d55a50fc6e8.jpg?v=1695816752" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Healthy_Cookies_-270x260_d1a4ebed-dbe9-43fc-872d-d03525021b73.jpg?v=1695816681" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Rava___Vermicelli-270x260_3542ef76-6a56-473e-bac9-fd7658253ac2.jpg?v=1695816681"class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Rejuvenate_Yourself-270x260_03a46c2f-326d-4d9d-a4b4-e0727dcf3672.jpg?v=1695816681" class="image4">
+        <img src="https://cdn.shopify.com/s/files/1/0173/7644/4470/files/Moisturizer-270x260_210f7ab2-7027-4a6f-a65a-bf2778dd86d9.jpg?v=1695817061" class="image4">
+    </div>
+    <table class="table1" style="margin-top: 344px; display: flex; justify-content: center;">
+        <tr>
+            <td><h1 style="color: black;">Fresh</h1></td>
+            <td>
+                <div class="clippath">
+                    <h1>Deals</h1>
+                </div>
+            </td>
+        </tr>
+       </table>
+       <div class="cart">
+        <div class="cartset">
+            <div class="cartset1">
+            <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100036509.jpg" class="image5">
+            <hr width="200px" style="margin-left: 8px;">
+            <br>
+            <p class="carttext" style="margin-left: 8px;">
+                Aashirvaad Whole Wheat <br>atta 10kg
+            </p>
+            <br>
+            <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">470.00</i></p>
+            <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>576.00</del><p>
+            <button id="button">Add To Cart</button>
+            </div>
+        </div>
+        <div class="cartset">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100002507.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Quaker Oatmeal 1kg Refill<br>Pack
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">189.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>199.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+        </div>
+        <div class="cartset">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/112090485.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Patanjali Whole Wheat Atta<br>10kg
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">539.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>576.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+        </div>
+        <div class="cartset">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100027057.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Amul Butter<br>(100g)
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">53.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>57.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+                
+        </div>
+       </div>
+       <!-- ----------dummy--------- -->
+       <div class="cart">
+        <div class="cartsett">
+            <div class="cartset1">
+            <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100038305.jpg" class="image5">
+            <hr width="200px" style="margin-left: 8px;">
+            <br>
+            <p class="carttext" style="margin-left: 8px;">
+                Fortune Sunlite Sunflower<br>Oil Jar 5L
+            </p>
+            <br>
+            <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">559.00</i></p>
+            <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>65.00</del><p>
+            <button id="button">Add To Cart</button>
+            </div>
+        </div>
+        <div class="cartsett">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100581990.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Sunpure Sunlower Oil<br>Oil Jar 5L
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">543.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>867.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+        </div>
+        <div class="cartsett">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/105813500.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Spat Atta Whole What<br>10kg
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">395.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>600.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+        </div>
+        <div class="cartsett">
+            <div class="cartset1">
+                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/122361445.jpg" class="image5">
+                <hr width="200px" style="margin-left: 8px;">
+                <br>
+                <p class="carttext" style="margin-left: 8px;">
+                    Areal Matic Front Load<br>(1 Kg)
+                </p>
+                <br>
+                <p><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(41, 39, 39); font-size: 13px; margin-left: 8px;">268.00</i></p>
+                <p style="margin-top: 4px; font-size: 15px; color: rgb(180, 175, 175); margin-left: 8px;">Market Price<del>357.00</del><p>
+                <button id="button">Add To Cart</button>
+                </div>
+                
+        </div>
+       </div>
+   </section>
+   <section id="fifth">
+    <table class="table">
+        <tr>
+            <td><h1 style="color: black;">Customers</h1></td>
+            <td>
+                <div class="clippath">
+                    <h1>Review's</h1>
+                </div>
+            </td>
+        </tr>
+       </table>
+       <div class="row">
+        <div class="formatimages">
+            <img src="https://images.pexels.com/photos/1816644/pexels-photo-1816644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Food" style="border-radius: 50%;" class="image6">
+            <br>
+            <p style="line-height: 25px;">I appreciate the transparency and commitment to sustainability this store demonstrates. Knowing that they support local farmers and prioritize environmentally friendly practices makes me feel good about my purchases.</p>
+            <br>
+            <p style="position: relative; top: -20px;"><br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+        </div>
+        <div class="formatimages">
+            <img src="https://images.pexels.com/photos/1816654/pexels-photo-1816654.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delivery Product" style="border-radius: 50%;" class="image6">
+            <br>
+            <p style="line-height: 25px;">I am absolutely thrilled with the organic products I purchased from this grocery store! The quality is top-notch, and I can genuinely taste the difference in freshness compared to conventional items. From fresh produce to pantry staples.</p>
+            <br>
+            <p style="position: relative; top: -20px;"><br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
+        </div>
+        <div class="formatimages">
+            <img src="https://images.pexels.com/photos/1249318/pexels-photo-1249318.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Digital Payment" style="border-radius: 50%;" class="image6">
+            <br>
+            <p style="line-height: 25px;">I've been a loyal customer for years, and I can confidently say that this grocery store has consistently delivered on their promise of high-quality organic products. It's my go-to destination for all things organic!"</p>
+            <br>
+            <p style="position: relative; top: -20px;"><br><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
+        </div>
+        <div class="Note">
+            <h1 style="color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 34px; position: relative; top: -300px; left: 400px; font-weight: bolder; text-decoration: underline;
+            box-shadow: 0px 0px 200px inset  hsl(54, 79%, 58%, 0.6);">Important Note:-</h1>
+            <br>
+            <h1 style="color: black; font-size: 20px; position: relative;
+            top: -288px; left: 77px;">WE DO NOT ASK FOR BANK ACCOUNT CARD DETAILS VERBALLY OR TELEPHONICALLY 
+            </h1>
+            <br>
+            <h1 style="color: black; font-size: 20px; position: relative;
+            top: -277px; left: 15px;">WE ALSO DO NOT ASK FOR MONEY TO PARTICIPATE IN ANY OF OUR OFFERS&RUN ANY LUCKY DRAWS.</h1>
+        </div>
+   </section>
+   <div class="Footer">
+    <div class="Footer_Content">
+        <div class="content">
+            <h3 style="text-align: center;">THE ORGANIC STORE</h3>
+            <br>
+
+            <p style="line-height: 25px; font-size: 14px; text-align: center;">The wide variety of organic options available at this store is impressive.From fresh produce to pantry staples and can be easily find everything I need for my healthy eco-friendly lifestyle</p>
+            <br>
+
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Contact Info</h2>
+            <br>
+            <p style="text-align: center;"><i class="fa-solid fa-phone-flip"></i>&nbsp;&nbsp;&nbsp;&nbsp;+91 9090908888</p>
+            <br>
+            <p style="text-align: center;"><i class="fa-solid fa-phone-flip"></i>&nbsp;&nbsp;&nbsp;&nbsp;+91 8888888888</p>
+            <br>
+            <p style="text-align: center; position: relative; left: 22px;"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;TheGrocery@gmail.com</p>
+            <br><p style="text-align: center; position: relative; left: 33px;"><i class="fa-solid fa-location-dot "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Armoor,Telanagana-500015</p>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;"> Quick Links</h2>
+            <br>
+            <p style="text-align: center;" id="quick"><i class="fa-solid fa-arrow-right-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <br>
+            <p style="text-align: center;" id="quick"><i class="fa-solid fa-arrow-right-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;Features</p>
+            <br>
+            <p style="text-align: center;" id="quick"><i class="fa-solid fa-arrow-right-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;Products</p>
+            <br>
+            <p style="text-align: center;" id="quick"><i class="fa-solid fa-arrow-right-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;Catogory</p>
+            <br>
+            <p style="text-align: center;" id="quick"><i class="fa-solid fa-arrow-right-long">&nbsp;&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;Review</p>
+
+            
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;"> NewLetter</h2>
+            <br>
+            <p style="text-align: center;">Subscribe For Latest Updates</p>
+            <br>
+            <input type="text" placeholder="Your Email" style="width: 188px; height: 34px; position: relative; left: 38px;
+            border: none; outline: none; box-shadow: 0px 0px 1px; background-color: transparent;" class="lastinput">
+            <br>
+            <br>
+            <button class="finalbutton" style="padding: 10px; position: relative; left: 38px; background-color: transparent; border-radius: 5px;width: 122px;" >Subscribe</button>
+        </div>
+            <p style="text-align: center; position: relative; top: -20px;">Created By Mr_Vijay(Choul) | All Right Reserved<p></p>
+            <hr style="position: relative; top: -88px;">
+    </div>
+   </div>
+</body>
+</html>
